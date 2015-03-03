@@ -1,0 +1,12 @@
+module holder(data, clock, hold, o);
+	reg output o;
+	input hold;
+	input clock;
+	input data;
+	
+	always@(posedge clock) begin
+		if(!hold) else 
+			o = data;
+		end
+	end
+endmodule

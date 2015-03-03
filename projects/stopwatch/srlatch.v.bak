@@ -1,0 +1,11 @@
+module srlatch(set, reset, clock);
+	output reg val;
+	
+	always(@posedge clock) begin
+		if(set == 1) begin
+			val = 1;
+		else if (reset == 1) begin
+			val = 0;
+		end
+	end
+endmodule
